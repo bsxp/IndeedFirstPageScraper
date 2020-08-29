@@ -21,7 +21,7 @@ class PostingFinder:
 
         URL = f'https://www.indeed.com/jobs?q={jobTitle.replace(" ", "+")}&l={location.replace(" ", "%20")}'
 
-        if URL in self.cachedSearches:
+        if URL in self.cachedSearches and doPrint is False:
             return False
 
         responses = []
